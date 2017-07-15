@@ -23,6 +23,11 @@ RUN apt-get install -y supervisor
 RUN apt-get install -y python-pip
 RUN pip install requests
 
+# Install dependencies for letterpress
+RUN apt-get install -y python3-pip
+RUN pip3 install pyinotify
+RUN pip3 install pygments
+
 # Add Scripts
 ADD scripts/start.sh /start.sh
 ADD scripts/pull /usr/bin/pull
