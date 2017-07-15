@@ -35,9 +35,9 @@ if [ ! -d "/var/www/html/.git" ]; then
    # Remove the test index file
    rm -Rf /var/www/html/index.php
    if [ ! -z "$GIT_BRANCH" ]; then
-     git clone -b $GIT_BRANCH $GIT_REPO /var/www/html
+     git clone -b $GIT_BRANCH $GIT_REPO /git
    else
-     git clone $GIT_REPO /var/www/html
+     git clone $GIT_REPO /git
    fi
  fi
 fi
