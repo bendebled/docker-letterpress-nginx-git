@@ -12,4 +12,5 @@ fi
 
 cd /git
 git pull
+sed -i "s/config\['site_dir'\]/\"\/var\/www\/html\/\"/g" /git/code/letterpress.py
 # chown -Rf nginx:nginx /var/www/html

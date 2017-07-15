@@ -39,6 +39,7 @@ if [ ! -d "/git/.git" ]; then
    else
      git clone $GIT_REPO /git
    fi
+   sed -i "s/config\['site_dir'\]/\"\/var\/www\/html\/\"/g" /git/code/letterpress.py
  fi
 fi
 
