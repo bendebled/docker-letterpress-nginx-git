@@ -27,6 +27,7 @@ RUN pip install requests
 RUN apt-get install -y python3-pip
 RUN pip3 install pyinotify
 RUN pip3 install pygments
+ENV PYTHONPATH=/git/code/:/git/code/markdown2/lib/
 
 # Add Scripts
 ADD scripts/start.sh /start.sh
